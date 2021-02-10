@@ -1,10 +1,12 @@
 * {
     margin: 0;
     padding: 0;
+    break-inside: avoid;
     font-family: -apple-system,BlinkMacSystemFont,segoe ui,roboto,oxygen,cantarell,helvetica neue,ubuntu,sans-serif;
+    font-family: 'Varela Round', sans-serif;
 }
-.gallery {
-    width: 1220px;
+.con {
+    width: 1210px;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -13,23 +15,139 @@
 }
 
 .box {
-    margin: 0 0 18px;
-    break-inside: avoid;
+    margin: 0 2px 19px;
+    overflow: hidden;
 }
 
-img {
+video,img {
     width: 100%;
+    z-index: -2;
 }
 
 .bac img {
     width: 100%;
 }
 
-h3 {
-    color: #1d1d1d;
+h2 {
+    color: #1a1a1a;
     font-size: 20px;
     font-weight: 640;
-    margin: 10px 0 0 20px;
+    margin: 30px 0 0 28px;
+}
+
+.ply{
+    width: 60px;
+    margin: -380px 165px;
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.box:hover .ico {
+    opacity: 1;
+}
+
+.ico {
+    position: absolute;
+    transition: 0.2s ease;
+    z-index: 10;
+}
+
+::selection {
+    background: #0064f95b;
+}
+
+h2::selection {
+    background: #f1c40f69;
+}
+
+.pol {
+    margin-top: -43px;
+    margin-left: 47px;
+    color: white; 
+    opacity: 0;
+}
+
+.fil {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.fil a {
+    font-size: 18px;
+    padding-left: 15px;
+    color: #3a3a3a;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.fil a:hover {
+    color: #0064f9;
+}
+
+.sel {
+    width: 60px;
+    height: 5px;
+    background: #0064f9;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 404px;
+    border-radius: 3px 3px 0 0;
+    display: none;
+}
+
+.log {
+    display: none;
+}
+
+.log img {
+    filter: brightness(0.8);
+    overflow: hidden;
+}
+
+.log input {
+    position: absolute;
+}
+
+.pup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00000070;
+}
+
+.pup-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: white;
+    width: 420px;
+    padding: 7px;
+    border-radius: 10px;
+}
+
+.pup-box img {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.pup-box .dow {
+    display: none;
+}
+
+.pup-box .can {
+    position: absolute;
+    width: 60px;
+    top: -65px;
+    left: -65px;
+    background: transparent;
+    padding: 4px;
+    opacity: 0.7;
+    padding-bottom: 0;
+    z-index: 999;
 }
 
 @media (max-width: 1200px) {
@@ -40,7 +158,23 @@ h3 {
 
 @media (max-width: 980px) {
     .con {
+        columns: 2;
+    }
+
+    h2 {
+        font-size: 18px;
+        margin-left: 15px;
+    }
+}
+
+@media (max-width: 650px) {
+    .con {
         columns: 1;
+    }
+    
+    h2 {
+        font-size: 18px;
+        margin-left: 13px;
     }
 
     .box {
@@ -49,6 +183,71 @@ h3 {
 
     h2 {
         font-size: 18px;
-        margin: 15px 0 0 12px;
+        margin-left: 13px;
+    }
+
+    .box::before {
+        opacity: 1;
+        width: 340px;
+        height: 60px;
+        display: none;
+    }
+
+    .fil {
+        overflow: auto;
+        white-space: nowrap;
+        display: flex;
+        width: 100%;
+    }
+
+    .fil a {
+        font-size: 18px;
+        padding-right: 11px;
+        padding-bottom: 20px;
+
+    }
+
+    .ply {
+        display: none;  
+    }
+
+    .pup {
+        background: white;
+    }
+
+    .pup-box {
+        width: 100%;
+        padding: 7px;
+        background: transparent;
+    }
+
+    .pup-box img {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .pup-box .dow {
+        background: #2ecc71;
+        padding: 10px 8px;
+        font-size: 20px;
+        border-radius: 4px;
+        border: none;
+        outline: none;
+        text-decoration: none;
+        margin: 4px 8px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        color: white;
+    }
+
+    .pup-box .can {
+        position: absolute;
+        width: 50px;
+        top: -85px;
+        filter: brightness(0);
+        left: 10px;
+        z-index: 999;
     }
 }
