@@ -182,6 +182,10 @@ h2::selection {
     justify-content: center;
 }
 
+.hea img {
+    width: 30px;
+    filter: brightness(0.6);
+}
 
 
 .log-pop {
@@ -268,14 +272,6 @@ h2::selection {
     color: #3a3a3a;
 }
 
-.staa {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -555;
-}
 
 [data-change-color="Dark"] .fil a:hover {
     color: #2ecc71;
@@ -294,8 +290,25 @@ h2::selection {
     color: white;
 }
 
+[data-change-color="Dark"] .hea img {
+    filter: brightness(1);
+}
+
 [data-change-color="Dark"] .hea li svg{
     filter: brightness(5);
+}
+
+[data-change-color="Dark"] .log-pop .log-inn {
+    background: #1a1a1a;
+    color: white;
+}
+
+[data-change-color="Dark"] .log-inn input {
+    background: #141414;
+}
+
+[data-change-color="Dark"] .forr {
+    color: white;
 }
 
 @media (max-width: 1200px) {
@@ -403,6 +416,6 @@ h2::selection {
     }
 
     .hea .joi {
-        display: none;
+        font-size: 16px;
     }
 }

@@ -26,7 +26,7 @@ $('.log-inn').click(function (e) {
     e.stopPropagation();
 });
 
-$('.hea li').on('click', function () {
+$('.hea .dar').on('click', function () {
     $('body').attr('data-change-color', $(this).data('color'));
 });
 
