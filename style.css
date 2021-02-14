@@ -184,7 +184,6 @@ h2::selection {
 
 .hea img {
     width: 30px;
-    filter: brightness(0.6);
 }
 
 
@@ -291,7 +290,7 @@ h2::selection {
 }
 
 [data-change-color="Dark"] .hea img {
-    filter: brightness(1);
+    filter: brightness(9);
 }
 
 [data-change-color="Dark"] .hea li svg{
